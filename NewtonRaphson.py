@@ -69,7 +69,7 @@ if st.button("Calcular raíz"):
             break
         xn = x_next
 
-           if historial:
+        if historial:
         # ======================
         # MOSTRAR TABLA DE ITERACIONES
         # ======================
