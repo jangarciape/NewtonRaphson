@@ -39,7 +39,7 @@ Este programa implementa el **Método de Newton-Raphson** para encontrar raíces
 # ======================
 # ENTRADAS DE USUARIO
 # ======================
-funcion_str = st.text_input("Ingresa la función en x:", "1-x^2")
+funcion_str = st.text_input("Ingresa la función en x:", "1-x^2-atan(x)")
 x0 = st.number_input("Valor inicial x0:", value=0.5)
 tol = st.number_input("Tolerancia:", value=1e-6, format="%.1e")
 max_iter = st.number_input("Número máximo de iteraciones:", value=20, step=1)
