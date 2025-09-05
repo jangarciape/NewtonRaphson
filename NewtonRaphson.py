@@ -73,9 +73,12 @@ if st.button("Calcular raíz"):
         # ======================
         # MOSTRAR TABLA DE ITERACIONES
         # ======================
-        df = pd.DataFrame(historial, columns=["Iteración", "x"])
-        st.write("### 📋 Iteraciones")
-        st.table(df)
+       df = pd.DataFrame(historial, columns=["Iteración", "x"])
+       # Formatear la columna 'x' con 12 decimales
+       df["x"] = df["x"].map(lambda v: f"{v:.12f}")
+
+      st.write("### 📋 Iteraciones")
+      st.table(df)
 
         # ======================
         # MOSTRAR RAÍZ FINAL
