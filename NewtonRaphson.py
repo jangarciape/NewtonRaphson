@@ -69,7 +69,7 @@ if st.button("Calcular raíz"):
             break
         xn = x_next
 
-       if historial:
+           if historial:
         # ======================
         # MOSTRAR TABLA DE ITERACIONES
         # ======================
@@ -84,7 +84,7 @@ if st.button("Calcular raíz"):
         # MOSTRAR RAÍZ FINAL
         # ======================
         raiz = historial[-1][1]
-        st.success(f"✅ Raíz aproximada: {raiz:.6f}")
+        st.success(f"✅ Raíz aproximada: {raiz:.12f}")
 
         # ======================
         # GRÁFICA DE LA FUNCIÓN
@@ -95,7 +95,8 @@ if st.button("Calcular raíz"):
         fig, ax = plt.subplots()
         ax.axhline(0, color='black', linewidth=0.8)
         ax.plot(x_vals, y_vals, label=f"f(x)={funcion_str}")
-        ax.plot(raiz, f_lamb(raiz), 'ro', label=f"Raíz ≈ {raiz:.6f}")
+        ax.plot(raiz, f_lamb(raiz), 'ro', label=f"Raíz ≈ {raiz:.12f}")
         ax.legend()
         ax.grid(True)
         st.pyplot(fig)
+
